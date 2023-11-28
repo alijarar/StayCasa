@@ -12,10 +12,10 @@ function Navbar() {
           <div className='flex flex-row justify-between gap-3 item-center md:gap-0'>
             <Logo/>
             <Search/>
-            <UserMenu/>
+            {/* <UserMenu/> */}
 
           </div>
-            </Container>
+        </Container>
         </div>
     </div>
   )
