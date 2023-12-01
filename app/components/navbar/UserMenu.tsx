@@ -2,53 +2,19 @@
 import React, { useCallback, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
-
-// interface Coworker {
-//   first_name: string;
-//   last_name: string;
-//   inOffice: boolean;
-// }
-
-// const UserMenu: React.FC = () => {
-//   const [coworkers, setCoworkers] = useState<Coworker[]>([
-//     { first_name: 'Max', last_name: 'Mustermann', inOffice: false },
-//     { first_name: 'Vladimir', last_name: 'Leles', inOffice: false },
-//     { first_name: 'Tobias', last_name: 'Anhalt', inOffice: false },
-//   ]);
-
-//   const toggleInOfficeStatus = (index: number) => {
-//     setCoworkers((prevCoworkers) => {
-//       const updatedCoworkers = [...prevCoworkers];
-//       updatedCoworkers[index].inOffice = !updatedCoworkers[index].inOffice;
-//       return updatedCoworkers;
-//     });
-//   };
-
-//   return (
-//     <div>
-//       {coworkers.map((coworker, index) => (
-//         <div key={index}>
-//           <p>Name: {coworker.first_name} {coworker.last_name}</p>
-//           <button onClick={() => toggleInOfficeStatus(index)}>{coworker.inOffice ? 'In office' : 'Out of office'}</button>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default CoworkerList;
+import MenuItem from "./MenuItem";
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
-    setIsOpen(!isOpen);
+    setIsOpen((value) => !value);
   }, []);
 
   return (
     <div className="relative">
       <div className="flex flex-row gap-3 item-center">
         <div
-          onClick={() => {}  }
+          onClick={() => {} }
           className="hidden px-4 py-3 text-sm font-semibold transition rounded-full cursor-pointer md:block hover:bg-neutral-100"
         >
           AirBnb Your Homw
@@ -77,6 +43,35 @@ const UserMenu = () => {
           </div>
         </div>
       </div>
+      {isOpen && (<div 
+          className="
+            absolute 
+            rounded-xl 
+            shadow-md
+            w-[40vw]
+            md:w-3/4 
+            bg-white 
+            overflow-hidden 
+            right-0 
+            top-12 
+            text-sm
+          "
+        >
+        <div className="flex flex-col cursor-pointer">
+          <MenuItem
+            onClick={() => { }}
+            label="Login"
+          />
+          <MenuItem
+            onClick={() => { }}
+            label="Sign Up"
+          />
+
+
+        </div>
+
+        
+      </div>)}
     </div>
   );
 };
