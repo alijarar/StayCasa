@@ -5,6 +5,8 @@ import Navbar from './components/navbar/Navbar'
 import Modal from './components/modals/Modal'
 import RegisterModal from './components/modals/RegisterModal'
 import ToasterProvider from './providers/ToasterProvider'
+import LoginModal from './components/modals/LoginModal'
+import getCurrentUser from './actions/getCurrentUser'
 
 const inter = Inter({ subsets: ['latin'] })
 const font =Nunito({
@@ -16,17 +18,19 @@ export const metadata = {
   description: 'A comfortable and welcoming rental experience',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
-}) {
+  }) {
+  const currentUser = await getCurrentUser()
   return (
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider></ToasterProvider>
         <RegisterModal />
-        <Navbar/>
+        <LoginModal/>
+        <Navbar currentUser={ currentUser } />
         {children}
       </body>
     </html>
