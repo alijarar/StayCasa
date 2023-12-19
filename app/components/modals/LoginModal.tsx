@@ -13,6 +13,7 @@ import {
 
 import useRegisterModal from '@/app/hooks/useRegtisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
+import axios from 'axios';
 import Modal from './Modal';
 import Heading from '../Heading';
 import Input from '../inputs/inputs';
@@ -95,13 +96,15 @@ const LoginModal = () => {
             outline 
             label="Continue with Google"
             icon={FcGoogle}
-            onClick={() => signIn('google')} 
+            // onClick={() => signIn('google')} 
+            onClick={() => {}}
           />
           <Button 
             outline 
             label="Continue with Github"
             icon={AiFillGithub}
-            onClick={() => signIn('github')}
+            // onClick={() => signIn('github')}
+            onClick={() => {}}
           />
           <div 
             className="
