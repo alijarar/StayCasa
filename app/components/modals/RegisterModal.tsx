@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { AiFillGithub } from "react-icons/ai";
-// import { signIn } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -94,15 +94,13 @@ const RegisterModal = () => {
             outline 
             label="Continue with Google"
             icon={FcGoogle}
-            // onClick={() => signIn('google')} 
-            onClick={() => {}}
+            onClick={() => signIn('google')} 
           />
           <Button 
             outline 
             label="Continue with Github"
             icon={AiFillGithub}
-            // onClick={() => signIn('github')}
-            onClick={() => {}}
+            onClick={() => signIn('github')}
           />
           <div 
             className="
