@@ -1,5 +1,5 @@
 import getCurrentUser from "./actions/getCurrentUser";
-import getListings from "./actions/geteListings";
+import getListings from "./actions/getListings";
 import ClientOnly from "./components/ClientOnly";
 import Container from "./components/Container";
 import  EmptyState from './components/EmptyState'
@@ -36,7 +36,7 @@ export default async  function Home() {
             gap-8
           "
         >
-          {listings.map((listing:any) => {
+          {listings.map((listing) => {
             return (
               <ListingCard
                 key={listing.id}
