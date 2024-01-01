@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full Stack Stay-Casa rental application with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth 2023
 
-## Getting Started
 
-First, run the development server:
+This is a repository for a Stay-Casa rental application with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+Features:
+
+- Tailwind design implementation
+- Application of Tailwind animations and effects
+- Ensuring complete responsiveness across various devices
+- Implementation of credential authentication
+- Integration of Google authentication
+- Incorporation of GitHub authentication
+- Utilization of Cloudinary CDN for image uploads
+- Client-side form validation and management using react-hook-form
+- Server-side error handling using react-toast
+- Integration of calendars with react-date-range
+- Management of page loading states
+- Handling page empty states
+- Implementation of a booking/reservation system
+- Allowance for guest reservation cancellation
+- Facilitation of owner reservation cancellation
+- Creation and deletion of properties
+- Pricing calculation functionality
+- Implementation of an advanced search algorithm based on category, date range, map location, number of guests, rooms, and bathrooms
+- Filtering out properties with reservations within a specified date range
+- Establishment of a favorites system
+- Integration of shareable URL filters
+- Ability to share a URL with selected category, location, and date range, providing consistent results to a logged-out friend in another browser
+- Guidance on writing POST and DELETE routes in route handlers (app/api)
+- Explanation of fetching data in server react components by directly accessing the database (without API, using methods like Magic!)
+- Handling files such as error.tsx and loading.tsx, which are new Next 13 templating files aimed at unifying loading and error handling
+- Guidance on managing relations between server and child components
+### Prerequisites
+
+**Node version 14.x**
+
+### Cloning the repository
+
+```shell
+git clone (https://github.com/alijarar/StayCasa.git)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+npm i
+```
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+### Setup .env file
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+```js
+DATABASE_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GITHUB_ID=
+GITHUB_SECRET=
+NEXTAUTH_SECRET=
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Setup Prisma
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```shell
+npx prisma db push
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
 
-## Deploy on Vercel
+### Start the app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```shell
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Available commands
+
+Running commands with npm `npm run [command]`
+
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
